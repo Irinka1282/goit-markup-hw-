@@ -146,12 +146,26 @@ p {
 .contacts-link:focus {
   color: var(--accent-color);
 }
+.icon-mail {
+  margin-right: 10px;
+  fill: currentColor;
+}
 
 /* hero */
 .hero {
   background-color: #2f303a;
+  max-width: 1600px;
+  height: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(..//images/hero/Img\ background.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-top: 200px;
+  padding-bottom: 200px;
   text-align: center;
-  padding: 200px 0px;
 }
 
 .hero-title {
@@ -211,6 +225,7 @@ p {
   display: flex;
   gap: 30px;
 }
+
 /* Work */
 
 .work-section {
