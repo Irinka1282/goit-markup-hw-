@@ -2,6 +2,7 @@
   --primary-text-color: #212121;
   --secondary-text-color: #757575;
   --accent-color: #2196f3;
+  --icon-color: #f5f4fa;
 }
 
 body {
@@ -146,8 +147,10 @@ p {
 .contacts-link:focus {
   color: var(--accent-color);
 }
-.icon-mail {
-  margin-right: 10px;
+.contacts-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
   fill: currentColor;
 }
 
@@ -225,6 +228,15 @@ p {
   display: flex;
   gap: 30px;
 }
+.features-box {
+  height: 120px;
+  background-color: var(--icon-color);
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
 
 /* Work */
 
@@ -290,6 +302,8 @@ img {
 .team {
   padding-top: 30px;
   padding-bottom: 30px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
 .about-team {
@@ -300,8 +314,111 @@ img {
   text-align: center;
   letter-spacing: 0.03em;
 }
+.social-list {
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+}
 
-/* Контакти*/
+.social-link {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  fill: #afb1b8;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+  align-items: center;
+}
+.social-link:hover,
+.social-link:focus {
+  background-color: var(--accent-color);
+  fill: #ffffff;
+}
+
+.social-firstlink {
+  display: flex;
+  width: 44px;
+  height: 44px;
+  margin: 0px;
+  padding: 0px;
+  fill: #ffffff;
+  justify-content: center;
+  cursor: pointer;
+  align-items: center;
+  border-radius: 50%;
+  background-color: var(--accent-color);
+}
+.social-firstlink:hover,
+.social-firstlink :focus {
+  background-color: #ffffff;
+  fill: #afb1b8;
+}
+/* Постійні клієнти */
+.clients-item {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.clients {
+  margin-top: 50px;
+  display: flex;
+  width: 170px;
+  height: 92px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  align-items: center;
+  justify-content: center;
+}
+
+.clients-item :hover,
+.clients-item :focus {
+  border-color: var(--accent-color);
+}
+
+.clients-hover {
+  margin-top: 50px;
+  display: flex;
+  width: 170px;
+  height: 92px;
+  border: 1px solid var(--accent-color);
+  border-radius: 4px;
+  align-items: center;
+  justify-content: center;
+}
+
+.clients-titel {
+  color: var(--primary-text-color);
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.16;
+  letter-spacing: 0.03em;
+  text-align: center;
+}
+
+.box-clients {
+  display: flex;
+  fill: #afb1b8;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon :hover,
+.icon :focus {
+  fill: var(--accent-color);
+}
+
+.icon-hover {
+  fill: var(--accent-color);
+}
+
+.clients-hover :hover,
+.clients-hover :focus {
+  fill: #afb1b8;
+}
+
+/* Контакти */
 
 .footer {
   padding-top: 60px;
@@ -372,6 +489,55 @@ img {
   color: var(--accent-color);
 }
 
+.footer {
+  display: flex;
+}
+
+.footer-titel {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-align: center;
+  margin-bottom: 20px;
+  margin-left: 70px;
+
+  text-transform: uppercase;
+}
+
+.footer-list {
+  display: flex;
+  gap: 10px;
+  margin-left: 70px;
+}
+
+.footer-link {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  fill: #ffffff;
+  justify-content: center;
+  cursor: pointer;
+  align-items: center;
+}
+
+.footer-secondlink {
+  display: flex;
+  width: 44px;
+  height: 44px;
+  fill: #ffffff;
+  justify-content: center;
+  cursor: pointer;
+  align-items: center;
+  border-radius: 50%;
+  background-color: var(--accent-color);
+}
+.footer-item {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+}
+
 /* Portfolio */
 
 /* Header  */
@@ -413,6 +579,7 @@ img {
   gap: 8px;
   padding: 0px;
   margin-bottom: 50px;
+  cursor: pointer;
 }
 .button-primary {
   display: inline-block;
@@ -485,7 +652,10 @@ img {
   border-left: 1px solid #eeeeee;
   border-bottom: 1px solid #eeeeee;
   border-right: 1px solid #eeeeee;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
+
 .title {
   margin-bottom: 4px;
   color: var(--primary-text-color);
