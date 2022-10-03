@@ -99,11 +99,11 @@ p {
 }
 
 .nav-studio:current {
-  color: var(--primary-text-color);
+  color: var(--accent-color);
 }
 .nav-studio:hover,
 .nav-studio:focus {
-  color: var(--primary-text-color);
+  color: var(--accent-color);
 }
 
 .nav-portfolio {
@@ -302,10 +302,14 @@ img {
 .team {
   padding-top: 30px;
   padding-bottom: 30px;
+}
+
+.team-border {
+  background-color: #ffffff;
+  border-radius: 4px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
 }
-
 .about-team {
   margin-bottom: 0px;
   color: var(--secondary-text-color);
@@ -318,6 +322,7 @@ img {
   display: flex;
   justify-content: center;
   margin-top: 16px;
+  gap: 10px;
 }
 
 .social-link {
@@ -336,24 +341,6 @@ img {
   fill: #ffffff;
 }
 
-.social-firstlink {
-  display: flex;
-  width: 44px;
-  height: 44px;
-  margin: 0px;
-  padding: 0px;
-  fill: #ffffff;
-  justify-content: center;
-  cursor: pointer;
-  align-items: center;
-  border-radius: 50%;
-  background-color: var(--accent-color);
-}
-.social-firstlink:hover,
-.social-firstlink :focus {
-  background-color: #ffffff;
-  fill: #afb1b8;
-}
 /* Постійні клієнти */
 .clients-item {
   display: flex;
@@ -362,33 +349,17 @@ img {
 }
 
 .clients {
-  margin-top: 50px;
-  display: flex;
   width: 170px;
   height: 92px;
-  border: 1px solid #afb1b8;
-  border-radius: 4px;
-  align-items: center;
-  justify-content: center;
 }
-
-.clients-item :hover,
-.clients-item :focus {
+.box-clients:hover,
+.box-clients:focus {
   border-color: var(--accent-color);
-}
-
-.clients-hover {
-  margin-top: 50px;
-  display: flex;
-  width: 170px;
-  height: 92px;
-  border: 1px solid var(--accent-color);
-  border-radius: 4px;
-  align-items: center;
-  justify-content: center;
+  fill: var(--accent-color);
 }
 
 .clients-titel {
+  margin-bottom: 50px;
   color: var(--primary-text-color);
   font-weight: 700;
   font-size: 36px;
@@ -398,24 +369,27 @@ img {
 }
 
 .box-clients {
+  fill: #afb1b8;
+}
+.box-clients :hover,
+.box-clients :focus {
+  background-color: var(--accent-color);
+}
+
+.icon {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #afb1b8;
   display: flex;
-  fill: #afb1b8;
-  justify-content: center;
   align-items: center;
-}
-
-.icon :hover,
-.icon :focus {
-  fill: var(--accent-color);
-}
-
-.icon-hover {
-  fill: var(--accent-color);
-}
-
-.clients-hover :hover,
-.clients-hover :focus {
+  justify-content: center;
   fill: #afb1b8;
+}
+
+.icon:hover,
+.icon:focus {
+  fill: var(--accent-color);
+  border-color: var(--accent-color);
 }
 
 /* Контакти */
@@ -489,10 +463,11 @@ img {
   color: var(--accent-color);
 }
 
-.footer {
+.container-footer {
   display: flex;
+  align-items: baseline;
+  margin-left: 215px;
 }
-
 .footer-titel {
   color: #ffffff;
   font-weight: 700;
@@ -522,19 +497,14 @@ img {
   align-items: center;
 }
 
-.footer-secondlink {
-  display: flex;
-  width: 44px;
-  height: 44px;
-  fill: #ffffff;
-  justify-content: center;
-  cursor: pointer;
-  align-items: center;
-  border-radius: 50%;
-  background-color: var(--accent-color);
-}
 .footer-item {
   background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+}
+
+.footer-item :hover,
+.footer-item:focus {
+  background-color: var(--accent-color);
   border-radius: 50%;
 }
 
@@ -594,12 +564,14 @@ img {
   letter-spacing: 0.03em;
   cursor: pointer;
   border: none;
+  border-radius: 4px;
 }
 
 .button-primary:hover,
 .button-primary:focus {
   color: #ffffff;
   background-color: var(--accent-color);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 .button-primary:active {
   color: var(--accent-color);
@@ -618,11 +590,13 @@ img {
   letter-spacing: 0.03em;
   cursor: pointer;
   border: none;
+  border-radius: 4px;
 }
 .button-secondary:hover,
 .button-secondary:focus {
   color: #ffffff;
   background-color: var(--accent-color);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
 .button-secondary:active {
@@ -652,8 +626,6 @@ img {
   border-left: 1px solid #eeeeee;
   border-bottom: 1px solid #eeeeee;
   border-right: 1px solid #eeeeee;
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .title {
@@ -670,4 +642,14 @@ img {
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.03em;
+}
+
+.filter-image {
+  display: block;
+}
+
+.filter-image:hover,
+.filter-image:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
