@@ -94,7 +94,7 @@ p {
 }
 
 .nav-studio {
-  color: var(--accent-color);
+  color: var(--primary-text-color);
   text-decoration: none;
 }
 
@@ -352,10 +352,12 @@ img {
   width: 170px;
   height: 92px;
 }
+
 .box-clients:hover,
 .box-clients:focus {
   border-color: var(--accent-color);
   fill: var(--accent-color);
+  border-color: var(--accent-color);
 }
 
 .clients-titel {
@@ -371,10 +373,6 @@ img {
 .box-clients {
   fill: #afb1b8;
 }
-.box-clients :hover,
-.box-clients :focus {
-  background-color: var(--accent-color);
-}
 
 .icon {
   width: 100%;
@@ -388,7 +386,6 @@ img {
 
 .icon:hover,
 .icon:focus {
-  fill: var(--accent-color);
   border-color: var(--accent-color);
 }
 
